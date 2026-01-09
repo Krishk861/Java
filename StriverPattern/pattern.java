@@ -34,7 +34,7 @@ void print4(int n){
     }
 void print5(int n){
     for(int i=1;i<=n;i++){
-        for(int j=5;j>=i;j--){
+        for(int j=1;j<=n-i+1;j++){
             System.out.print("*");
         }
         System.out.println("");   
@@ -42,10 +42,26 @@ void print5(int n){
 }
 void print6(int n){
     for(int i=1;i<=n;i++){
-        for(int j=5;j>=i;j--){
-            System.out.print(i);
+        for(int j=1;j<=n-i+1;j++){
+            System.out.print(j);
         }
         System.out.println("");   
+    }
+}
+void print7(int n){
+    for(int i=1;i<=n;i++){
+        //space
+        for(int j=0;i<n-i-1;j++){
+            System.out.print(" ");
+        }
+        //star
+        for(int j=0;i<2*i+1;j++){
+            System.out.print("*");
+
+        //space
+        for(int j=0;i<n-i-1;j++){
+            System.out.print(" ");
+
     }
 }
 }
@@ -61,9 +77,9 @@ class Output{
         ab.print4(a);
         ab.print5(a);      
         ab.print6(a);      
-        ab.print7(a);      
-        ab.print8(a);      
-        ab.print9(a);      
-        ab.print10(a);      
+        // ab.print7(a);      
+        // ab.print8(a);      
+        // ab.print9(a);      
+        // ab.print10(a);      
     }
 }
