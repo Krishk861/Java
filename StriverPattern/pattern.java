@@ -193,7 +193,86 @@ void print17(int n){
         System.out.println("");
     }
 }
+void print18(int n){
+    for (int i=1;i<=n;i++){
+        for(int j=0;j<n-i+1;j++){
+            System.out.print("*");
+        }
+        for(int j=0;j<2*(i-1);j++){
+            System.out.print(" ");
+        }
+        for(int j=0;j<n-i+1;j++){
+            System.out.print("*");
+        }
+        System.out.println("");
+    }
+    for(int i =n-1;i>=1;i--){
+        for(int j=0;j<n-i+1;j++){
+            System.out.print("*");
+        }
+        for(int j=0;j<2*(i-1);j++){
+            System.out.print(" ");
+        }
+        for(int j=0;j<n-i+1;j++){
+            System.out.print("*");
+        }
+        System.out.println("");
+    }
 }
+void print19(int n){
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=i;j++){
+            System.out.print("*");
+        }
+        for(int j=1;j<=2*(n-i);j++){
+            System.out.print(" ");
+        }
+        for(int j=1;j<=i;j++){
+            System.out.print("*");
+        }
+        System.out.println("");
+    }
+    for(int i=n-1;i>=1;i--){
+        for(int j=1;j<=i;j++){
+            System.out.print("*");
+        }
+        for(int j=1;j<=2*(n-i);j++){
+            System.out.print(" ");
+        }
+        for(int j=1;j<=i;j++){
+            System.out.print("*");
+        }
+        System.out.println("");
+    }
+}
+void print20(int n){
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            if(j==0 || j==n-1 || i==0 || i==n-1){
+                System.out.print("*");
+            }
+            else{
+                System.out.print(" ");
+            }
+        }
+        System.out.println("");
+    }
+}
+void print21(int n){
+    for(int i=0;i<2*n-1;i++){
+        for(int j=0;j<2*n-1;j++){
+            int top=i;
+            int left=j;
+            int  right=(2*n-2)-j;
+            int  bottom=(2*n-2)-i;
+            int min= Math.min(Math.min(top, bottom),Math.min(left,right));
+            System.out.print(n-min);
+        }
+        System.out.println("");
+    }
+}
+}
+
 class Output{
     public static void main(String[] args) {
         pattern ab=new pattern();
@@ -217,5 +296,9 @@ class Output{
         // ab.print15(a);      
         // ab.print16(a);      
         ab.print17(a);      
+        ab.print18(a);      
+        ab.print19(a);      
+        ab.print20(a);      
+        ab.print21(a);      
     }
 }
