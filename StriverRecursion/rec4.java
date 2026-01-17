@@ -1,12 +1,12 @@
-
+//code for backtracing
 import java.util.*;
-public class rec3 {
+public class rec4 {
     static void pattern(int i,int n){
         if(i>n){
             return;
         }
-        System.out.println("Krish");
         pattern(i+1, n);
+        System.out.println(i);
     }
 
     public static void main(String agrs[]){
