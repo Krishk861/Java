@@ -1,10 +1,21 @@
-public class Demo {
+class Solution {
+    public static boolean isPowerOfFour(int n) {
+    while(n!=1){
+        if(n%4==0){
+            n=n/4;
+            if(n==1){
+                return true;
+            }
+        }
+        else{
+            return false;
+        }
+    }
+    return false;
+    }
+    
     public static void main(String z[]) {
-        int a=22;
-        int b=23;
-        int c=24;
-        int s=25;
-        boolean result= a>b && c>s;
-        System.out.println(result);
+        var n=22;
+        isPowerOfFour(n);
     }
 }
