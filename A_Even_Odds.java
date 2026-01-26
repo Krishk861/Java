@@ -5,13 +5,12 @@ public class A_Even_Odds{
         Scanner sc=new Scanner(System.in);
         int n= sc.nextInt();
         int index=sc.nextInt();
-        ArrayList<Integer> list= new ArrayList<>();
-        for(int i=1;i<=n;i+=2){
-                list.add(i);              
-            }
-        for(int i=2;i<=n;i+=2){
-            list.add(i);
+        int Odd_Count=(n+1)/2;
+        if(index<Odd_Count){
+            System.out.println(2*index-1);
         }
-        System.out.println(list.indexOf(index));
+        else{
+            System.out.println(2*(index-Odd_Count));
+        }
     }
 }
